@@ -1,14 +1,17 @@
 import './App.css';
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import Payment from './components/Payment';
+import Home from './pages/Home';
 function App() {
   return (
-    <div className="App">
-     
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-       
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="payment" element={<Payment />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
