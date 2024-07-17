@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+import { initiatePayment } from '../service/PaymentService';
 const Payment = () => {
 
     const [amount, setAmount] = useState('');
@@ -11,6 +12,9 @@ const Payment = () => {
 
     const handlePayment = () => {
         alert(amount);
+        initiatePayment(name, email, amount)
+          .then(res=>console.log("Payment sucess"))
+          .catch(err=>console.log("Payment failed"));
     }    
   return (
       <Box>
