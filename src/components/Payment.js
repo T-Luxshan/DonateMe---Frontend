@@ -39,7 +39,7 @@ const Payment = () => {
             variant="outlined"
             onChange={(e) => setEmail(e.target.value)}
             />
-          <Button variant="contained" onClick={handlePayment}>Contained</Button>
+          <Button variant="contained" onClick={handlePayment}>Donate</Button>
 
       </Box>
   )
