@@ -13,8 +13,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/payment" element={<Payment />} />
-        <Route path="/success" element={<Success />} />
-        <Route path="/failure" element={<Failure />} />
+        <Route path="/payment/success" element={<Success />} />
+        <Route path="/payment/failure" element={<Failure />} />
       </Routes>
     </BrowserRouter>
   );
