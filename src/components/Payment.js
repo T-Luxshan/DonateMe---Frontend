@@ -11,10 +11,13 @@ const Payment = () => {
     const [email, setEmail] = useState('');
 
     const handlePayment = () => {
-        alert(amount);
         initiatePayment(name, email, amount)
-          .then(res=>console.log("Payment sucess"))
+          .then(res=>{
+              console.log("Payment sucess")
+              window.location.href = res.data;
+          })
           .catch(err=>console.log("Payment failed"));
+
     }    
   return (
       <Box>
